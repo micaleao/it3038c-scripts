@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>Hobbies</h2>
+<p>In my free time, I like to hangout with my friends, play video games and play sports like basketball or golf.
+    My favorite video game to play is on the PS4 and is called FIFA 22. 
+</p>
+<p>Want to learn more about FIFA? If so, enter "yes" in the box, and if not enter anything in the box.</p>
+<form action="/fifa" method="POST">
+    <input name="getfifa">
+    <input type="submit" value="Submit">
+</form>
+<!--"yes" needs to be entered in that way exactly or you will be returned to the main page. If you are not returned to the main
+page check routes.py in the last @app.route to set locations and what the submission will do.-->
+{% endblock %}

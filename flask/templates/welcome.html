@@ -1,6 +1,27 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<p><em>Hello, {{ myName }}</em></p>
+<!--If the name is not listed check routes.py to make sure that myName is spelled properly and in the correct locations. 
+It should be the same format as the others listed. Look at that request.form line and make sure everythigns spelled correctly.
+Check to also make sure you are not using the same name as functions which is one error I encountered during creation.-->
 
+<p><em>Hello, {{ myName }}</em></p>
+<p>Click which option you would like to see next.
+    <form action="/back" method="POST">
+        <input name="getBack">
+        <input type="submit" value="Creator's Background Info">
+    </form>
+    <form action="/sport" method="POST">
+        <input name="getSport">
+        <input type="submit" value="Best Sports Teams">
+    </form>
+    <form action="/college" method="POST">
+        <input name="getCollege">
+        <input type="submit" value="College">
+    </form>
+    <form action="/hobby" method="POST">
+        <input name="getHobby">
+        <input type="submit" value="My Hobbies">
+    </form>
+</p>
 {% endblock %}
